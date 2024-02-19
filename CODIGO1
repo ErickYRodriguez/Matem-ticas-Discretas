@@ -1,1 +1,8 @@
-Codigo
+numero = int(input("Ingrese su valor a comprobar: "))
+
+resultado = (numero //2)
+
+if (resultado == 0):
+    print(f"El numero {numero} es impar")
+else:
+    print(f"El numero {numero} es par")
