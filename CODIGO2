@@ -1,0 +1,12 @@
+print("Adivine el número: ?")
+
+numero = int(input("Ingrese su valor a comprobar: "))
+
+busca = 5
+
+if numero < busca:
+    print(f"El numero {numero} es menor, pero estas cerca!")
+elif numero > busca:
+    print(f"El numero {numero} es mayor, pero estas cerca!")
+else:
+    print(f"¡El numero {numero} es correcto!!!")
