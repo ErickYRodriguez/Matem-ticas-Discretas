@@ -1,0 +1,19 @@
+numero1 = int(input("Ingrese el primer número: "))
+numero2 = int(input("Ingrese el segundo número: "))
+
+def suma_divisores_propios(numero):
+    suma = 0
+    for i in range(1, numero):
+        if numero % i == 0:
+            suma += i
+    return suma
+
+def son_amigos(numero1, numero2):
+    suma1 = suma_divisores_propios(numero1)
+    suma2 = suma_divisores_propios(numero2)
+    return suma1 == numero2 == suma2
+
+if son_amigos(numero1, numero2):
+    print(f"{numero1} y {numero2} son números amigos.")
+else:
+    print(f"{numero1} y {numero2} no son números amigos.")
