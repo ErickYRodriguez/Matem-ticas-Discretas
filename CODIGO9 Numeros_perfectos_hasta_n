@@ -1,0 +1,24 @@
+numero = int(input("Ingrese el valor que desea: "))
+
+def es_numero_perfecto(numero):
+    suma_divisores = 0
+    for i in range(1, numero):
+        if numero % i == 0:
+            suma_divisores += i
+    return suma_divisores == numero
+
+def numeros_perfectos_hasta_numero(numero):
+    numeros_perfectos = []
+    for num in range(1, numero + 1):
+        if es_numero_perfecto(num):
+            numeros_perfectos = numeros_perfectos + [num]
+    return numeros_perfectos
+
+if numero <= 0:
+    print("El número debe ser un entero positivo!")
+else:
+    perfectos_hasta_numero = numeros_perfectos_hasta_numero(numero)
+    if perfectos_hasta_numero:
+        print(f"Los números perfectos hasta {numero} son: {perfectos_hasta_numero}")
+    else:
+        print(f"No hay números perfectos hasta {numero}.")
