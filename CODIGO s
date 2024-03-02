@@ -1,0 +1,81 @@
+#Programa que calcule diferentes sucesiones (1-6) hasta N.
+#Por: Erick Y. Rodríguez C.
+
+eleccion = int(input("Ingrese la sucesión que desea (1-7): "))
+
+if (eleccion == 1):
+    print("Eligio la sucesión del tipo: -1,1,-1,1,-1,1")
+    limite = int(input("Hasta que valor desea calcular: "))
+    
+    for i in range(1, limite + 1):
+        resultado = ((-1) ** i)
+        print(resultado)
+        
+        
+        
+elif (eleccion == 2): #E
+    print("Eligio la sucesión del tipo: 0,1,-2,3,-4,5")
+    limite = int(input("Hasta que valor desea calcular: "))
+    
+    for i in range(1, limite + 1):
+        resultado1 = ((-1) ** i)
+        resultado2 = (i + resultado1) // 2
+        resultado3 = resultado2 * resultado1
+        print(resultado3)
+
+
+
+elif (eleccion == 3):
+    print("Eligio la sucesión del tipo: 1/4, 2/9, 3/16, 4/25, 5/36, 6/49")
+    limite = int(input("Hasta que valor desea calcular: "))
+    
+    for i in range(1, limite + 1):
+        resultado1 = i
+        resultado2 = (i + 1) * (i + 1)
+        print(f"{resultado1}/{resultado2}")
+        
+        
+        
+elif (eleccion == 4): 
+    print("Eligio la sucesión del tipo: 1-1/2, 1/2-1/3, 1/3-1/4, 1/4-1/5 ")
+    limite = int(input("Hasta que valor desea calcular: "))
+    
+    for i in range(1, limite + 1):
+        resultado1 = ((i) ** -1)
+        resultado2 = ((i + 1) ** -1)
+        print(f"{resultado1} - {resultado2}")
+        
+        
+        
+elif (eleccion == 5):
+    print("Eligio la sucesión del tipo: 1/3, 4/9, 9/27, 16/81, 25/243")
+    limite = int(input("Hasta que valor desea calcular: "))
+    
+    for i in range(1, limite + 1):
+        resultado1 = ((i) ** 2)
+        resultado2 = ((3) ** i)
+        print(f"{resultado1}/{resultado2}")
+        
+        
+        
+elif (eleccion == 6): #E
+    print("Eligio la sucesión del tipo: 0,-1/2, 2/3, -3/4, 4/5, -5/6")
+    limite = int(input("Hasta que valor desea calcular: "))
+    
+    for i in range(1, limite + 1):
+        resultado1 = (-1) ** i
+        resultado2 = (i - 1)
+        resultado3 = resultado1 * resultado2
+        print(f"{resultado3}/{i}")
+        
+        
+        
+elif (eleccion == 7):
+    print("Eligio la sucesión del tipo: 3, 6, 12, 24, 48, 96")
+    limite = int(input("Hasta que valor desea calcular: "))
+    primero = 3
+    print(primero)
+    
+    for i in range(1, limite + 1):
+        primero = primero * 2
+        print(primero)
