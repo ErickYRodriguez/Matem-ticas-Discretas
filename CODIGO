@@ -1,0 +1,14 @@
+#Programa para calcular total de antepasados hasta cierta generación.
+#Por: Erick Y. Rodríguez C.
+
+limite = int(input("¿Hasta que generación que desea calcular?: "))
+contador = 0
+
+for i in range(1, limite + 1):
+    operacion = (2 ** i)
+    print (operacion)
+    contador = contador + operacion
+    limite + 1
+
+print ("\n")
+print (f"El total de antepasados hasta la generación {limite} es de {contador} antepasados")
